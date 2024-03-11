@@ -36,31 +36,44 @@
                     <li><a class="dropdown-item" href="shop.html">The Kind Shop</a></li>
                     <li><a class="dropdown-item" href="contact.html">Contact</a></li>
                     <li><a class="dropdown-item" href="help.html">Help</a></li>
-
                 </ul>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    <div class="row">
-      <div class="leftcolumn">
-        <div class="card">
-          <h2>About</h2>
-          <div class="fakeimg" style="height:200px;">Image</div>
-          <p></p>
-        </div>
-        <div class="card">
-          <div class="fakeimg"><p>Image</p></div>
-          <div class="fakeimg"><p>Image</p></div>
-          <div class="fakeimg"><p>Image</p></div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </div>
-    <div class="footer">
-      <h2>The Kind Earth ©2024</h2>
-    </div>
+      <header>
+        <h1>Online Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Art</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Donate to Charity</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <main>
+        <section class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $20</p>
+            <button onclick="addToCart('product1')">Add to Cart</button>
+        </section>
+        
+        <section class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Price: $30</p>
+             <button onclick="addToCart('product2')">Add to Cart</button>
+        </section>
+    </main>
+
+    <div class="footer">
+        <h2>The Kind Earth ©2024</h2>
+      </div>
     </body>
     </html>
     
