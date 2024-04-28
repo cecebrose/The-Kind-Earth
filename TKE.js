@@ -1,19 +1,45 @@
 /* Shopping */
-let cart = [];
+class GalleryFilter {
+    filtersSelector = ".cs-button";
+    imagesSelector = ".cs-listing";
+    activeClass = "cs-active";
+    hiddenClass = "cs-hidden";
 
-function addToCart(productId) {
-    let product = document.getElementById(productId);
-    let productName = product.querySelector('h2').textContent;
-    let productPrice = parseFloat(product.querySelector('p').textContent.split('$')[1]);
-    
-    let item = {
-        name: productName,
-        price: productPrice
-    };
+    constructor() {
+        const $filters = document.querySelectorAll(this.filtersSelector);
+        this.$activeFilter = $filters[0];
+        this.$images = document.querySelectorAll(this.imagesSelector);
 
-    cart.push(item);
-    alert(`"${productName}" added to cart!`);
+
+        for (const $filter of $filters) {
+            $filter.addEventListener("click", () => this.onClick($filter));
+        }
+    }
+
+    onClick($filter) {
+        this.filter($filter.dataset.filter);
+
+        const { activeClass } = this;
+
+        this.$activeFilter.classList.remove(activeClass);
+        $filter.classList.add(activeClass);
+
+        this.$activeFilter = $filter;
+    }
+
+    filter(filter) {
+        const showAll = filter == "all";
+        const { hiddenClass } = this;
+
+        for (const $image of this.$images) {
+            const show = showAll || $image.dataset.category == filter;
+            $image.classList.toggle(hiddenClass, !show);
+        }
+    }
 }
+
+new GalleryFilter();
+                            
 
 /* Time Clock */
 function updateClock() {
@@ -33,18 +59,8 @@ let counterDisplayElem = document.querySelector('.counter-display');
 let counterMinusElem = document.querySelector('.counter-minus');
 let counterPlusElem = document.querySelector('.counter-plus');
 let count = 0;
-updateDisplay();
 
-counterPlusElem.addEventListener("click",()=>{
-    count++;
-    updateDisplay();
-}) ;
 
-counterMinusElem.addEventListener("click",()=>{
-    count--;
-    updateDisplay();
-});
 
-function updateDisplay(){
-    counterDisplayElem.innerHTML = count;
-};
+
+

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="TKE.js"></script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,6 +15,9 @@
     
     <div class="header">
       <h1>The Kind Earth</h1>
+      <p id="gmt"></p>
+      <p id="cet"></p>
+      <p id="est"></p>
     </div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
@@ -42,41 +46,57 @@
           </div>
         </div>
       </nav>
-    <div class="row">
-      <div class="leftcolumn">
-        <div class="card">
-          <h2>TITLE HEADING</h2>
-          <h5></h5>
-          <div class="fakeimg" style="height:200px;">Image</div>
-          <p>Some text..</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+   <!-- ============================================ -->
+<!--                  Gallery                     -->
+<!-- ============================================ -->
+
+<section id="gallery-1716">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">Welcome to The Kind Earth</h2>
+            <p class="cs-text">
+                We believe in doing right by our planet in every way possible. 
+            </p>
         </div>
-        <div class="card">
-          <h2>TITLE HEADING</h2>
-          <h5></h5>
-          <div class="fakeimg" style="height:200px;">Image</div>
-          <p>Some text..</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <div class="cs-gallery">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 700px)"
+                        srcset="images/fauna1 copy.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)"
+                        srcset="images/fauna1 copy.jpg">
+                <img loading="lazy" decoding="async"
+                        src="images/fauna1 copy.jpg" alt="picture"
+                        width="480" height="549">
+            </picture>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 700px)"
+                        srcset="images/Alaska13.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)"
+                        srcset="images/Alaska13.jpg">
+                <img loading="lazy" decoding="async"
+                        src="images/Alaska13.jpg" alt="picture"
+                        width="580" height="549">
+            </picture>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 900px)"
+                        srcset="images/fauna5 copy.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)"
+                        srcset="images/fauna5 copy.jpg">
+                <img loading="lazy" decoding="async"
+                        src="images/fauna5 copy.jpg" alt="picture"
+                        width="780" height="549">
+            </picture>
         </div>
-      </div>
-      <div class="rightcolumn">
-        <div class="card">
-          <h2>Tip of The Day!</h2>
-          <div class="fakeimg" style="height:100px;">Image</div>
-          <p>Some text here</p>
-        </div>
-        <div class="card">
-          <h3>This Week's Featured Animal Is...</h3>
-          <div class="fakeimg"><p>Image</p></div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <div class="card">
-          <h3>Follow The Kind Earth</h3>
-          <p>Social Media Goes Here</p>
-        </div>
-      </div>
     </div>
+</section>
+                                
     
     <div class="footer">
       <h2>The Kind Earth ©2024</h2>
